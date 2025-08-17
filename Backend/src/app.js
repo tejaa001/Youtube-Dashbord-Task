@@ -26,6 +26,13 @@ app.use("/api/video", videoRoutes);
 app.use("/api/comments", commentRoutes);
 app.use("/api/notes", noteRoutes);
 app.use("/api/auth", authRoutes);
+app.get("/",(req,res)=>{
+    res.send({
+      activeStatus:true,
+      error:false,
+    })
+})
+
 
 // Global Error Handler
 app.use(errorHandler);
